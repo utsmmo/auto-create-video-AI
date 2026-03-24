@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veo3 Creative Suite | Image Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>VEO3 CREATIVE</h1>
+            <p class="subtitle">Hệ thống tạo ảnh nghệ thuật tương lai bằng Trí Tuệ Nhân Tạo</p>
+        </header>
+
+        <nav class="mode-tabs">
+            <button class="tab-btn active" data-mode="image">
+                <i class="fas fa-image"></i> Tạo Ảnh
+            </button>
+            <button class="tab-btn" data-mode="video">
+                <i class="fas fa-video"></i> Tạo Video (Veo 3)
+            </button>
+        </nav>
+
+        <div class="main-grid">
+            <aside class="control-panel">
+                <form id="generate-form">
+                    <div class="input-group">
+                        <label id="prompt-label" for="prompt">Nhập mô tả ý tưởng (Prompt)</label>
+                        <textarea id="prompt"
+                            placeholder="Ví dụ: Một chiếc xích lô bay trên đường phố Hà Nội năm 2077, phong cách Cyberpunk, ánh đèn neon..."
+                            required></textarea>
+                    </div>
+
+                    <div id="image-options" class="options-grid">
+                        <div class="input-group">
+                            <label for="aspect">Tỉ lệ khung hình</label>
+                            <select id="aspect">
+                                <option value="1:1">1:1 (Square)</option>
+                                <option value="16:9">16:9 (Landscape)</option>
+                                <option value="9:16">9:16 (Portrait)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="quality">Chất lượng</label>
+                            <select id="quality">
+                                <option value="high">Cao (High)</option>
+                                <option value="pro">Chuyên nghiệp (Pro)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="gen-btn">
+                        <i class="fas fa-magic"></i> <span id="btn-text">Tạo Hình Ảnh Ngay</span>
+                    </button>
+                </form>
+            </aside>
+
+            <main class="preview-area">
+                <div id="loader" class="loader"></div>
+                <div id="status-text" class="status-message"></div>
+
+                <div id="placeholder" class="preview-placeholder">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <p>Sáng tạo của bạn sẽ xuất hiện tại đây</p>
+                </div>
+
+                <img id="result-image" src="" alt="Generated Result">
+                <video id="result-video" controls style="display: none; width: 100%; border-radius: 12px;"></video>
+            </main>
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

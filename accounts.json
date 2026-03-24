@@ -1,0 +1,14 @@
+[
+    {
+        "profile_id": "4186fbb3-85d4-4d26-b2e8-ce84f773ff8c",
+        "name": "Profile1",
+        "credits": 40,
+        "status": "active"
+    },
+    {
+        "profile_id": "Profile2",
+        "name": "Profile2",
+        "credits": 50,
+        "status": "active"
+    }
+]
