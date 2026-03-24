@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+google-genai
+celery
+redis
+pydantic-settings
+moviepy
